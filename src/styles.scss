@@ -1,0 +1,75 @@
+/* Import Bootstrap 5 CSS & Bootstrap Icons */
+@import 'bootstrap/scss/bootstrap';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Dynamic Theme CSS Custom Properties (Defaulted to Client A Blue) */
+:root {
+  --primary-color: #0d6efd;
+  --secondary-color: #0b5ed7;
+  --accent-color: #6ea8fe;
+  --bg-color: #f8f9fa;
+  --header-bg: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+  --primary-rgb: 13, 110, 253;
+  --font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: var(--font-family-base);
+  color: #212529;
+  min-height: 100vh;
+  margin: 0;
+  transition: background-color 0.3s ease;
+}
+
+/* Custom Utility & Branding Classes */
+.btn-client-primary {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  color: #ffffff !important;
+  transition: all 0.25s ease-in-out;
+  
+  &:hover, &:focus {
+    background-color: var(--secondary-color) !important;
+    border-color: var(--secondary-color) !important;
+    box-shadow: 0 0 0 0.25rem rgba(var(--primary-rgb), 0.35);
+  }
+}
+
+.text-client-primary {
+  color: var(--primary-color) !important;
+}
+
+.bg-client-header {
+  background: var(--header-bg) !important;
+  color: #ffffff;
+}
+
+.border-client-primary {
+  border-color: var(--primary-color) !important;
+}
+
+.badge-client {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+/* Form focus ring theme overrides */
+.form-control:focus, .form-select:focus {
+  border-color: var(--accent-color) !important;
+  box-shadow: 0 0 0 0.25rem rgba(var(--primary-rgb), 0.25) !important;
+}
+
+/* Custom Card Styling */
+.card-theme {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-theme:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}

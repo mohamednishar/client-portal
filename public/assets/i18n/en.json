@@ -1,0 +1,86 @@
+{
+  "APP": {
+    "TITLE": "Multi-Tenant Enterprise Portal",
+    "FOOTER_TEXT": "© 2026 Enterprise Client Portal. All rights reserved.",
+    "POWERED_BY": "Powered by Angular 20 Standalone Architecture"
+  },
+  "NAV": {
+    "DASHBOARD": "Dashboard",
+    "USERS": "Users Management",
+    "LOGOUT": "Logout",
+    "LOGIN": "Login"
+  },
+  "COMMON": {
+    "CLIENT": "Client",
+    "ROLE": "Role",
+    "USER": "User",
+    "ACTIONS": "Actions",
+    "CANCEL": "Cancel",
+    "SAVE": "Save",
+    "SEARCH": "Search",
+    "RESET": "Reset",
+    "LOADING": "Loading data...",
+    "NO_DATA": "No records found matching your criteria.",
+    "SELECT_DEPARTMENT": "-- Select Department --",
+    "ALL_DEPARTMENTS": "All Departments"
+  },
+  "LOGIN": {
+    "TITLE": "Client Portal Sign In",
+    "SUBTITLE": "Enter your credentials to access your organization workspace",
+    "USERNAME_LABEL": "Username (Email)",
+    "USERNAME_PLACEHOLDER": "enter email...",
+    "PASSWORD_LABEL": "Password",
+    "PASSWORD_PLACEHOLDER": "enter password...",
+    "SUBMIT_BTN": "Sign In",
+    "DEMO_ACCOUNTS": "Quick Demo Credentials",
+    "SUPER_ADMIN": "Super Admin",
+    "ADMIN": "Admin",
+    "STANDARD_USER": "Standard User",
+    "ERRORS": {
+      "REQUIRED_FIELDS": "Please enter both username and password.",
+      "INVALID_CREDENTIALS": "Invalid username or password for the selected client portal.",
+      "CLIENT_NOT_FOUND": "Client workspace configuration not found."
+    }
+  },
+  "DASHBOARD": {
+    "WELCOME_BACK": "Welcome back",
+    "OVERVIEW_TITLE": "Workspace Overview",
+    "TOTAL_USERS": "Total Active Users",
+    "TOTAL_DEPARTMENTS": "Total Departments",
+    "ACTIVE_ROLE": "Assigned Role",
+    "ACTIVE_CLIENT": "Current Client",
+    "THEME_SWATCH": "Active Theme Palette",
+    "QUICK_LINKS": "Quick Navigation",
+    "MANAGE_USERS_BTN": "View & Search Users Grid"
+  },
+  "USERS": {
+    "TITLE": "User Directory & Management",
+    "SUBTITLE": "Search and filter personnel across organization departments",
+    "SEARCH_FORM": {
+      "TITLE": "Filter Personnel",
+      "DEPARTMENT_LABEL": "Filter by Department",
+      "SEARCH_LABEL": "Search by Name or Email",
+      "SEARCH_PLACEHOLDER": "Type name or email...",
+      "SEARCH_BTN": "Apply Filter",
+      "CLEAR_BTN": "Clear Filter"
+    },
+    "TABLE": {
+      "FIRST_NAME": "First Name",
+      "LAST_NAME": "Last Name",
+      "EMAIL": "Email Address",
+      "DOB": "Date of Birth",
+      "DEPARTMENT": "Department",
+      "ROLE": "Role"
+    },
+    "ERRORS": {
+      "AT_LEAST_ONE_REQUIRED": "Either Department or Search Text is required to search.",
+      "MAX_LENGTH_EXCEEDED": "Search text cannot exceed 15 characters."
+    },
+    "ROLE_NOTICE": "DOB column is strictly restricted to Super Admin roles."
+  },
+  "ERRORS": {
+    "NOT_FOUND_TITLE": "404 - Page Not Found",
+    "NOT_FOUND_MSG": "The requested client route or page does not exist.",
+    "BACK_TO_LOGIN": "Return to Client Login"
+  }
+}

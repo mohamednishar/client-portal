@@ -1,0 +1,97 @@
+{
+  "clientId": "client-a",
+  "clientName": "Apex Innovations (Client A)",
+  "theme": {
+    "primaryColor": "#0d6efd",
+    "secondaryColor": "#0b5ed7",
+    "accentColor": "#6ea8fe",
+    "backgroundColor": "#f8f9fa",
+    "headerBg": "linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%)"
+  },
+  "logo": "assets/images/client-a-logo.svg",
+  "departments": [
+    "Engineering",
+    "Human Resources",
+    "Finance",
+    "Product Management",
+    "Sales"
+  ],
+  "roles": [
+    "Super Admin",
+    "Admin",
+    "User"
+  ],
+  "mockCredentials": [
+    {
+      "username": "superadmin@clienta.com",
+      "password": "password123",
+      "role": "Super Admin"
+    },
+    {
+      "username": "admin@clienta.com",
+      "password": "password123",
+      "role": "Admin"
+    },
+    {
+      "username": "user@clienta.com",
+      "password": "password123",
+      "role": "User"
+    }
+  ],
+  "users": [
+    {
+      "id": "usr-a01",
+      "firstName": "Alexander",
+      "lastName": "Wright",
+      "email": "superadmin@clienta.com",
+      "dob": "1988-04-12",
+      "department": "Engineering",
+      "role": "Super Admin"
+    },
+    {
+      "id": "usr-a02",
+      "firstName": "Sophia",
+      "lastName": "Martinez",
+      "email": "admin@clienta.com",
+      "dob": "1992-08-25",
+      "department": "Human Resources",
+      "role": "Admin"
+    },
+    {
+      "id": "usr-a03",
+      "firstName": "Daniel",
+      "lastName": "Kim",
+      "email": "user@clienta.com",
+      "dob": "1995-11-03",
+      "department": "Engineering",
+      "role": "User"
+    },
+    {
+      "id": "usr-a04",
+      "firstName": "Olivia",
+      "lastName": "Chen",
+      "email": "olivia.chen@clienta.com",
+      "dob": "1990-02-14",
+      "department": "Finance",
+      "role": "Admin"
+    },
+    {
+      "id": "usr-a05",
+      "firstName": "Ethan",
+      "lastName": "Taylor",
+      "email": "ethan.taylor@clienta.com",
+      "dob": "1994-06-30",
+      "department": "Product Management",
+      "role": "User"
+    },
+    {
+      "id": "usr-a06",
+      "firstName": "Emma",
+      "lastName": "Johnson",
+      "email": "emma.j@clienta.com",
+      "dob": "1991-09-18",
+      "department": "Sales",
+      "role": "User"
+    }
+  ]
+}

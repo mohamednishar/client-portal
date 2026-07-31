@@ -1,0 +1,26 @@
+import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
+
+@Component({
+  selector: 'app-footer',
+  standalone: true,
+  imports: [CommonModule, TranslateModule],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: `
+    <footer class="bg-white border-top py-3 mt-auto shadow-sm">
+      <div class="container-fluid px-4">
+        <div class="d-flex flex-column flex-sm-row align-items-center justify-content-between text-muted small gap-2">
+          <div>
+            <span>{{ 'APP.FOOTER_TEXT' | translate }}</span>
+          </div>
+          <div class="d-flex align-items-center gap-2">
+            <span class="badge bg-light text-secondary border">Angular 20 Standalone</span>
+            <span>{{ 'APP.POWERED_BY' | translate }}</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  `
+})
+export class FooterComponent {}
