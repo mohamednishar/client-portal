@@ -7,6 +7,7 @@ import { AuthService } from '../../../../core/services/auth.service';
 import { ClientService } from '../../../../core/services/client.service';
 import { UserRole } from '../../../../core/models/role.enum';
 import { MockCredential } from '../../../../core/models/client.model';
+import { APP_ROUTES } from '../../../../core/constants/routes.constants';
 
 @Component({
   selector: 'app-login',
@@ -138,11 +139,12 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.initForm();
-    
-    // Redirect to dashboard if already logged in
-    if (this.authService.isLoggedIn()) {
-      const clientId = this.clientService.getClientId() || 'client-a';
-      this.router.navigate(['/', clientId, 'dashboard']);
+
+    // Redirect to dashboard ONLY when already logged into THIS tenant.
+    // A session owned by another tenant must never grant access here.
+    const tenant = this.getRouteTenant();
+    if (this.authService.isLoggedIn() && this.authService.getCurrentTenant() === tenant) {
+      this.router.navigateByUrl(this.getSafeReturnUrl(tenant) || `/${tenant}/${APP_ROUTES.DASHBOARD}`);
     }
   }
 
@@ -187,9 +189,8 @@ export class LoginComponent implements OnInit {
         this.isSubmittingSignal.set(false);
 
         if (response.success) {
-          const clientId = this.clientService.getClientId() || 'client-a';
-          const returnUrl = this.route.snapshot.queryParams['returnUrl'] || `/${clientId}/dashboard`;
-          this.router.navigateByUrl(returnUrl);
+          const tenant = this.getRouteTenant();
+          this.router.navigateByUrl(this.getSafeReturnUrl(tenant) || `/${tenant}/${APP_ROUTES.DASHBOARD}`);
         } else {
           this.errorMessageSignal.set(response.errorKey || 'LOGIN.ERRORS.INVALID_CREDENTIALS');
         }
@@ -199,5 +200,28 @@ export class LoginComponent implements OnInit {
         this.errorMessageSignal.set('LOGIN.ERRORS.INVALID_CREDENTIALS');
       }
     });
+  }
+
+  /**
+   * The tenant this login page was reached for, taken from the URL.
+   */
+  private getRouteTenant(): string {
+    return (
+      this.route.snapshot.parent?.paramMap.get(APP_ROUTES.PARAM_CLIENT_ID) ||
+      this.clientService.getClientId() ||
+      APP_ROUTES.DEFAULT_CLIENT_ID
+    );
+  }
+
+  /**
+   * Only returns a returnUrl that belongs to the given tenant.
+   * Cross-tenant return URLs are rejected to prevent tenant confusion.
+   */
+  private getSafeReturnUrl(tenant: string): string | null {
+    const rawUrl = this.route.snapshot.queryParams['returnUrl'];
+    if (typeof rawUrl === 'string' && rawUrl.startsWith(`/${tenant}/`)) {
+      return rawUrl;
+    }
+    return null;
   }
 }

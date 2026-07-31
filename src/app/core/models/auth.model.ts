@@ -12,5 +12,7 @@ export interface LoginResponse {
   success: boolean;
   token?: string;
   user?: User;
+  role?: string;
+  clientId?: string;
   errorKey?: string;
 }

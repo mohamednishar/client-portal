@@ -15,25 +15,25 @@ import { ClientTheme } from '../../../core/models/client.model';
           <i class="bi bi-palette me-2 text-client-primary"></i>
           {{ 'DASHBOARD.THEME_SWATCH' | translate }}
         </h6>
-        <span class="badge badge-client rounded-pill text-uppercase">CSS Variables</span>
+        <span class="badge badge-client rounded-pill text-uppercase">{{ 'DASHBOARD.CSS_VARIABLES' | translate }}</span>
       </div>
 
       <div class="row g-2 text-center" *ngIf="theme">
         <div class="col-6">
           <div class="p-2 rounded text-white fw-medium shadow-sm" [style.backgroundColor]="theme.primaryColor">
-            Primary
+            {{ 'DASHBOARD.THEME_PRIMARY' | translate }}
             <div class="small opacity-75">{{ theme.primaryColor }}</div>
           </div>
         </div>
         <div class="col-6">
           <div class="p-2 rounded text-white fw-medium shadow-sm" [style.backgroundColor]="theme.secondaryColor">
-            Secondary
+            {{ 'DASHBOARD.THEME_SECONDARY' | translate }}
             <div class="small opacity-75">{{ theme.secondaryColor }}</div>
           </div>
         </div>
         <div class="col-12 mt-2">
           <div class="p-2 rounded text-dark fw-medium shadow-sm" [style.backgroundColor]="theme.accentColor">
-            Accent Highlight
+            {{ 'DASHBOARD.THEME_ACCENT' | translate }}
             <div class="small opacity-75">{{ theme.accentColor }}</div>
           </div>
         </div>

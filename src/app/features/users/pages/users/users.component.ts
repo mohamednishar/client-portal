@@ -31,13 +31,13 @@ import { atLeastOneFieldRequiredValidator, maxSearchLengthValidator } from '../.
         <div class="d-flex align-items-center gap-2">
           <span class="badge p-2.5 rounded-pill shadow-sm" [class.bg-warning]="isSuperAdmin()" [class.text-dark]="isSuperAdmin()" [class.bg-info]="!isSuperAdmin()" [class.text-white]="!isSuperAdmin()">
             <i class="bi bi-shield-check me-1"></i>
-            Role: {{ currentRole() }}
+            {{ 'USERS.ROLE_LABEL' | translate: { role: currentRole() } }}
           </span>
           <span *ngIf="isSuperAdmin()" class="badge bg-success p-2.5 rounded-pill shadow-sm">
-            <i class="bi bi-eye-fill me-1"></i> DOB Column Visible
+            <i class="bi bi-eye-fill me-1"></i> {{ 'USERS.DOB_VISIBLE' | translate }}
           </span>
           <span *ngIf="!isSuperAdmin()" class="badge bg-secondary p-2.5 rounded-pill shadow-sm">
-            <i class="bi bi-eye-slash-fill me-1"></i> DOB Column Hidden
+            <i class="bi bi-eye-slash-fill me-1"></i> {{ 'USERS.DOB_HIDDEN' | translate }}
           </span>
         </div>
       </div>
@@ -50,7 +50,7 @@ import { atLeastOneFieldRequiredValidator, maxSearchLengthValidator } from '../.
         </h6>
 
         <form [formGroup]="searchForm" novalidate>
-          <div class="row g-3 align-items-start">
+          <div class="row g-3 align-items-end">
             
             <!-- Department Dropdown -->
             <div class="col-12 col-md-5 col-lg-4">
@@ -72,7 +72,7 @@ import { atLeastOneFieldRequiredValidator, maxSearchLengthValidator } from '../.
             <!-- Search Text Input -->
             <div class="col-12 col-md-5 col-lg-5">
               <label for="searchInput" class="form-label fw-semibold small text-muted">
-                {{ 'USERS.SEARCH_FORM.SEARCH_LABEL' | translate }} (Max 15 chars)
+                {{ 'USERS.SEARCH_FORM.SEARCH_LABEL' | translate }} {{ 'USERS.SEARCH_FORM.MAX_CHARS_HINT' | translate: { count: 15 } }}
               </label>
               <div class="input-group shadow-sm">
                 <span class="input-group-text bg-white text-muted">
@@ -119,10 +119,10 @@ import { atLeastOneFieldRequiredValidator, maxSearchLengthValidator } from '../.
         <div class="card-header bg-white py-3 px-4 d-flex align-items-center justify-content-between border-bottom">
           <h6 class="fw-bold m-0 text-dark">
             <i class="bi bi-table me-2 text-client-primary"></i>
-            <span>User Directory Records</span>
+            <span>{{ 'USERS.TABLE.TITLE' | translate }}</span>
           </h6>
           <span class="badge bg-light text-dark border rounded-pill px-3 py-1 fw-semibold">
-            Showing {{ filteredUsersSignal().length }} of {{ totalUsersCount() }} users
+            {{ 'USERS.TABLE.SHOWING_COUNT' | translate: { shown: filteredUsersSignal().length, total: totalUsersCount() } }}
           </span>
         </div>
 
@@ -137,7 +137,7 @@ import { atLeastOneFieldRequiredValidator, maxSearchLengthValidator } from '../.
                 <!-- Role-Based Column rendering: DOB visible strictly for Super Admin (STEP 13) -->
                 <th scope="col" class="py-3 text-client-primary" *ngIf="isSuperAdmin()">
                   <i class="bi bi-calendar-event me-1"></i>
-                  {{ 'USERS.TABLE.DOB' | translate }} (Super Admin Only)
+                  {{ 'USERS.TABLE.DOB' | translate }} {{ 'USERS.TABLE.SUPER_ADMIN_ONLY' | translate }}
                 </th>
                 <th scope="col" class="py-3">{{ 'USERS.TABLE.DEPARTMENT' | translate }}</th>
                 <th scope="col" class="py-3">{{ 'USERS.TABLE.ROLE' | translate }}</th>
@@ -181,7 +181,7 @@ import { atLeastOneFieldRequiredValidator, maxSearchLengthValidator } from '../.
                   <div class="py-3 text-muted">
                     <i class="bi bi-search fs-1 d-block mb-2 text-secondary opacity-50"></i>
                     <h6 class="fw-bold mb-1">{{ 'COMMON.NO_DATA' | translate }}</h6>
-                    <p class="small text-muted m-0">Try clearing or adjusting your department or search query.</p>
+                    <p class="small text-muted m-0">{{ 'COMMON.NO_DATA_HINT' | translate }}</p>
                   </div>
                 </td>
               </tr>

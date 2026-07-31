@@ -8,7 +8,9 @@
     "DASHBOARD": "Dashboard",
     "USERS": "Users Management",
     "LOGOUT": "Logout",
-    "LOGIN": "Login"
+    "LOGIN": "Login",
+    "CLIENT_A": "Client A",
+    "CLIENT_B": "Client B"
   },
   "COMMON": {
     "CLIENT": "Client",
@@ -21,6 +23,7 @@
     "RESET": "Reset",
     "LOADING": "Loading data...",
     "NO_DATA": "No records found matching your criteria.",
+    "NO_DATA_HINT": "Try clearing or adjusting your department or search query.",
     "SELECT_DEPARTMENT": "-- Select Department --",
     "ALL_DEPARTMENTS": "All Departments"
   },
@@ -42,35 +45,61 @@
       "CLIENT_NOT_FOUND": "Client workspace configuration not found."
     }
   },
+  "LOGOUT_CONFIRM": {
+    "TITLE": "Confirm Logout",
+    "MESSAGE": "Are you sure you want to sign out of this tenant workspace?",
+    "CONFIRM_BTN": "Logout",
+    "CANCEL_BTN": "Cancel"
+  },
   "DASHBOARD": {
     "WELCOME_BACK": "Welcome back",
+    "WELCOME_USER": "Welcome back, {{ name }}!",
+    "ROLE_WORKSPACE": "{{ role }} Workspace",
+    "WELCOME_DESCRIPTION": "Logged in to {{ client }}. Access organization metrics, user roster, and department configuration.",
     "OVERVIEW_TITLE": "Workspace Overview",
     "TOTAL_USERS": "Total Active Users",
     "TOTAL_DEPARTMENTS": "Total Departments",
     "ACTIVE_ROLE": "Assigned Role",
     "ACTIVE_CLIENT": "Current Client",
+    "CLIENT_ID": "ID: {{ id }}",
     "THEME_SWATCH": "Active Theme Palette",
     "QUICK_LINKS": "Quick Navigation",
-    "MANAGE_USERS_BTN": "View & Search Users Grid"
+    "MANAGE_USERS_BTN": "View & Search Users Grid",
+    "CARD_USERS_FOOTER": "Active client user directory",
+    "CARD_DEPTS_FOOTER": "Configured organizational units",
+    "FULL_ACCESS": "Full System Access",
+    "STANDARD_ACCESS": "Standard Access",
+    "CONFIGURED_DEPARTMENTS": "Configured Departments",
+    "CSS_VARIABLES": "CSS Variables",
+    "THEME_PRIMARY": "Primary",
+    "THEME_SECONDARY": "Secondary",
+    "THEME_ACCENT": "Accent Highlight"
   },
   "USERS": {
     "TITLE": "User Directory & Management",
     "SUBTITLE": "Search and filter personnel across organization departments",
+    "ROLE_LABEL": "Role: {{ role }}",
+    "DOB_VISIBLE": "DOB Column Visible",
+    "DOB_HIDDEN": "DOB Column Hidden",
     "SEARCH_FORM": {
       "TITLE": "Filter Personnel",
       "DEPARTMENT_LABEL": "Filter by Department",
       "SEARCH_LABEL": "Search by Name or Email",
       "SEARCH_PLACEHOLDER": "Type name or email...",
       "SEARCH_BTN": "Apply Filter",
-      "CLEAR_BTN": "Clear Filter"
+      "CLEAR_BTN": "Clear Filter",
+      "MAX_CHARS_HINT": "(Max {{ count }} chars)"
     },
     "TABLE": {
+      "TITLE": "User Directory Records",
       "FIRST_NAME": "First Name",
       "LAST_NAME": "Last Name",
       "EMAIL": "Email Address",
       "DOB": "Date of Birth",
       "DEPARTMENT": "Department",
-      "ROLE": "Role"
+      "ROLE": "Role",
+      "SHOWING_COUNT": "Showing {{ shown }} of {{ total }} users",
+      "SUPER_ADMIN_ONLY": "(Super Admin Only)"
     },
     "ERRORS": {
       "AT_LEAST_ONE_REQUIRED": "Either Department or Search Text is required to search.",

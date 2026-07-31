@@ -19,13 +19,13 @@ import { ThemePreviewComponent } from '../../../../shared/components/theme-previ
           <div class="col-lg-8 mb-3 mb-lg-0">
             <span class="badge bg-white text-dark mb-2 px-3 py-2 fw-bold text-uppercase shadow-sm">
               <i class="bi bi-shield-check me-1 text-client-primary"></i>
-              {{ currentRole() }} Workspace
+              {{ 'DASHBOARD.ROLE_WORKSPACE' | translate: { role: currentRole() } }}
             </span>
             <h2 class="fw-bold display-6 mb-2">
-              {{ 'DASHBOARD.WELCOME_BACK' | translate }}, {{ currentUser()?.firstName }}!
+              {{ 'DASHBOARD.WELCOME_USER' | translate: { name: currentUser()?.firstName } }}
             </h2>
             <p class="lead opacity-90 m-0">
-              Logged in to <strong>{{ clientName() }}</strong>. Access organization metrics, user roster, and department configuration.
+              {{ 'DASHBOARD.WELCOME_DESCRIPTION' | translate: { client: clientName() } }}
             </p>
           </div>
           <div class="col-lg-4 text-lg-end">
@@ -58,7 +58,7 @@ import { ThemePreviewComponent } from '../../../../shared/components/theme-previ
             </div>
             <div class="mt-3 pt-2 border-top text-muted small d-flex align-items-center gap-1">
               <i class="bi bi-check-circle-fill text-success"></i>
-              <span>Active client user directory</span>
+              <span>{{ 'DASHBOARD.CARD_USERS_FOOTER' | translate }}</span>
             </div>
           </div>
         </div>
@@ -79,7 +79,7 @@ import { ThemePreviewComponent } from '../../../../shared/components/theme-previ
             </div>
             <div class="mt-3 pt-2 border-top text-muted small d-flex align-items-center gap-1">
               <i class="bi bi-building text-success"></i>
-              <span>Configured organizational units</span>
+              <span>{{ 'DASHBOARD.CARD_DEPTS_FOOTER' | translate }}</span>
             </div>
           </div>
         </div>
@@ -100,7 +100,7 @@ import { ThemePreviewComponent } from '../../../../shared/components/theme-previ
             </div>
             <div class="mt-3 pt-2 border-top text-muted small d-flex align-items-center gap-1">
               <i class="bi bi-link-45deg text-info"></i>
-              <span>ID: {{ clientId() }}</span>
+              <span>{{ 'DASHBOARD.CLIENT_ID' | translate: { id: clientId() } }}</span>
             </div>
           </div>
         </div>
@@ -121,7 +121,7 @@ import { ThemePreviewComponent } from '../../../../shared/components/theme-previ
             </div>
             <div class="mt-3 pt-2 border-top text-muted small d-flex align-items-center gap-1">
               <i class="bi bi-shield-lock text-warning"></i>
-              <span>{{ isSuperAdmin() ? 'Full System Access' : 'Standard Access' }}</span>
+              <span>{{ (isSuperAdmin() ? 'DASHBOARD.FULL_ACCESS' : 'DASHBOARD.STANDARD_ACCESS') | translate }}</span>
             </div>
           </div>
         </div>
@@ -140,7 +140,7 @@ import { ThemePreviewComponent } from '../../../../shared/components/theme-previ
           <div class="card card-theme h-100 p-4">
             <h6 class="fw-bold text-muted mb-3 d-flex align-items-center gap-2">
               <i class="bi bi-diagram-3 text-client-primary"></i>
-              <span>Configured Departments</span>
+              <span>{{ 'DASHBOARD.CONFIGURED_DEPARTMENTS' | translate }}</span>
             </h6>
             <div class="d-flex flex-wrap gap-2">
               <div *ngFor="let dept of departments()" class="badge bg-light text-dark border p-2.5 rounded-pill fs-6 fw-normal d-flex align-items-center gap-2 shadow-sm">
