@@ -14,42 +14,7 @@ declare const bootstrap: BootstrapApi;
   standalone: true,
   imports: [CommonModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  template: `
-    <div class="dropdown">
-      <button
-        #dropdownToggle
-        class="btn btn-sm btn-outline-light dropdown-toggle d-flex align-items-center gap-2 rounded-pill px-3 py-1 shadow-sm"
-        type="button"
-        id="languageDropdown"
-        data-bs-toggle="dropdown"
-        aria-expanded="false">
-        <i class="bi bi-globe"></i>
-        <span class="fw-semibold">{{ currentLang() === 'en' ? 'English' : 'தமிழ்' }}</span>
-      </button>
-      <ul class="dropdown-menu dropdown-menu-end shadow border-0 mt-2" aria-labelledby="languageDropdown">
-        <li>
-          <button
-            type="button"
-            class="dropdown-item d-flex align-items-center justify-content-between py-2"
-            [class.active]="currentLang() === 'en'"
-            (click)="selectLanguage('en')">
-            <span>English</span>
-            <i *ngIf="currentLang() === 'en'" class="bi bi-check-lg text-success ms-2"></i>
-          </button>
-        </li>
-        <li>
-          <button
-            type="button"
-            class="dropdown-item d-flex align-items-center justify-content-between py-2"
-            [class.active]="currentLang() === 'ta'"
-            (click)="selectLanguage('ta')">
-            <span>தமிழ் (Tamil)</span>
-            <i *ngIf="currentLang() === 'ta'" class="bi bi-check-lg text-success ms-2"></i>
-          </button>
-        </li>
-      </ul>
-    </div>
-  `
+  templateUrl: './language-switcher.component.html'
 })
 export class LanguageSwitcherComponent {
   private languageService = inject(LanguageService);
