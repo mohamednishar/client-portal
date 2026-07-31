@@ -1,0 +1,88 @@
+{
+  "clientId": "client-b",
+  "clientName": "BioNexus Health (Client B)",
+  "theme": {
+    "primaryColor": "#198754",
+    "secondaryColor": "#146c43",
+    "accentColor": "#75b798",
+    "backgroundColor": "#f4fbf7",
+    "headerBg": "linear-gradient(135deg, #198754 0%, #0f5132 100%)"
+  },
+  "logo": "assets/images/client-b-logo.svg",
+  "departments": [
+    "Research & Development",
+    "Quality Assurance",
+    "Clinical Operations",
+    "Regulatory Affairs",
+    "IT Support"
+  ],
+  "roles": [
+    "Super Admin",
+    "Admin",
+    "User"
+  ],
+  "mockCredentials": [
+    {
+      "username": "superadmin@clientb.com",
+      "password": "password123",
+      "role": "Super Admin"
+    },
+    {
+      "username": "admin@clientb.com",
+      "password": "password123",
+      "role": "Admin"
+    },
+    {
+      "username": "user@clientb.com",
+      "password": "password123",
+      "role": "User"
+    }
+  ],
+  "users": [
+    {
+      "id": "usr-b01",
+      "firstName": "Marcus",
+      "lastName": "Vance",
+      "email": "superadmin@clientb.com",
+      "dob": "1985-01-19",
+      "department": "Research & Development",
+      "role": "Super Admin"
+    },
+    {
+      "id": "usr-b02",
+      "firstName": "Isabella",
+      "lastName": "Rossi",
+      "email": "admin@clientb.com",
+      "dob": "1989-05-11",
+      "department": "Quality Assurance",
+      "role": "Admin"
+    },
+    {
+      "id": "usr-b03",
+      "firstName": "Lucas",
+      "lastName": "Patel",
+      "email": "user@clientb.com",
+      "dob": "1993-12-04",
+      "department": "Clinical Operations",
+      "role": "User"
+    },
+    {
+      "id": "usr-b04",
+      "firstName": "Ava",
+      "lastName": "Gupta",
+      "email": "ava.gupta@clientb.com",
+      "dob": "1996-07-22",
+      "department": "Regulatory Affairs",
+      "role": "Admin"
+    },
+    {
+      "id": "usr-b05",
+      "firstName": "Noah",
+      "lastName": "Schneider",
+      "email": "noah.s@clientb.com",
+      "dob": "1991-03-15",
+      "department": "IT Support",
+      "role": "User"
+    }
+  ]
+}
