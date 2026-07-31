@@ -23,17 +23,17 @@
   ],
   "mockCredentials": [
     {
-      "username": "superadmin@clientb.com",
+      "username": "superadmin@client.com",
       "password": "password123",
       "role": "Super Admin"
     },
     {
-      "username": "admin@clientb.com",
+      "username": "admin@client.com",
       "password": "password123",
       "role": "Admin"
     },
     {
-      "username": "user@clientb.com",
+      "username": "user@client.com",
       "password": "password123",
       "role": "User"
     }
@@ -43,7 +43,7 @@
       "id": "usr-b01",
       "firstName": "Marcus",
       "lastName": "Vance",
-      "email": "superadmin@clientb.com",
+      "email": "superadmin@client.com",
       "dob": "1985-01-19",
       "department": "Research & Development",
       "role": "Super Admin"
@@ -52,7 +52,7 @@
       "id": "usr-b02",
       "firstName": "Isabella",
       "lastName": "Rossi",
-      "email": "admin@clientb.com",
+      "email": "admin@client.com",
       "dob": "1989-05-11",
       "department": "Quality Assurance",
       "role": "Admin"
@@ -61,7 +61,7 @@
       "id": "usr-b03",
       "firstName": "Lucas",
       "lastName": "Patel",
-      "email": "user@clientb.com",
+      "email": "user@client.com",
       "dob": "1993-12-04",
       "department": "Clinical Operations",
       "role": "User"

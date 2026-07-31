@@ -26,6 +26,7 @@ export class LoginComponent implements OnInit {
   public loginForm!: FormGroup;
   public errorMessageSignal = signal<string | null>(null);
   public isSubmittingSignal = signal<boolean>(false);
+  public showPasswordSignal = signal<boolean>(false);
 
   public clientName = () => this.clientService.getClientName();
   public mockCredentials = () => this.clientService.currentClientSignal()?.mockCredentials || [];
@@ -59,6 +60,10 @@ export class LoginComponent implements OnInit {
       password: cred.password
     });
     this.clearError();
+  }
+
+  public togglePasswordVisibility(): void {
+    this.showPasswordSignal.update((visible) => !visible);
   }
 
   public clearError(): void {

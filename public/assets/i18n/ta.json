@@ -34,6 +34,8 @@
     "USERNAME_PLACEHOLDER": "மின்னஞ்சல் உள்ளிடவும்...",
     "PASSWORD_LABEL": "கடவுச்சொல்",
     "PASSWORD_PLACEHOLDER": "கடவுச்சொல் உள்ளிடவும்...",
+    "SHOW_PASSWORD": "கடவுச்சொல்லை காட்டு",
+    "HIDE_PASSWORD": "கடவுச்சொல்லை மறை",
     "SUBMIT_BTN": "உள்நுழைக",
     "DEMO_ACCOUNTS": "மாதிரி கணக்குகள்",
     "SUPER_ADMIN": "சூப்பர் அட்மின்",
@@ -41,6 +43,8 @@
     "STANDARD_USER": "சாதாரண பயனர்",
     "ERRORS": {
       "REQUIRED_FIELDS": "பயனர்பெயர் மற்றும் கடவுச்சொல் இரண்டையும் உள்ளிடவும்.",
+      "REQUIRED_FIELD_USERNAME": "பயனர்பெயர் உள்ளிடவும்.",
+      "REQUIRED_FIELD_PASSWORD": "கடவுச்சொல் உள்ளிடவும்.",
       "INVALID_CREDENTIALS": "தவறான பயனர்பெயர் அல்லது கடவுச்சொல்.",
       "CLIENT_NOT_FOUND": "கிளையண்ட் அமைப்புகள் கிடைக்கவில்லை."
     }

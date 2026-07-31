@@ -23,17 +23,17 @@
   ],
   "mockCredentials": [
     {
-      "username": "superadmin@clienta.com",
+      "username": "superadmin@client.com",
       "password": "password123",
       "role": "Super Admin"
     },
     {
-      "username": "admin@clienta.com",
+      "username": "admin@client.com",
       "password": "password123",
       "role": "Admin"
     },
     {
-      "username": "user@clienta.com",
+      "username": "user@client.com",
       "password": "password123",
       "role": "User"
     }
@@ -43,7 +43,7 @@
       "id": "usr-a01",
       "firstName": "Alexander",
       "lastName": "Wright",
-      "email": "superadmin@clienta.com",
+      "email": "superadmin@client.com",
       "dob": "1988-04-12",
       "department": "Engineering",
       "role": "Super Admin"
@@ -52,7 +52,7 @@
       "id": "usr-a02",
       "firstName": "Sophia",
       "lastName": "Martinez",
-      "email": "admin@clienta.com",
+      "email": "admin@client.com",
       "dob": "1992-08-25",
       "department": "Human Resources",
       "role": "Admin"
@@ -61,7 +61,7 @@
       "id": "usr-a03",
       "firstName": "Daniel",
       "lastName": "Kim",
-      "email": "user@clienta.com",
+      "email": "user@client.com",
       "dob": "1995-11-03",
       "department": "Engineering",
       "role": "User"

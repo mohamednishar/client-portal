@@ -38,6 +38,10 @@ body {
   color: var(--primary-color) !important;
 }
 
+.bg-client-primary {
+  background-color: var(--primary-color) !important;
+}
+
 .bg-client-header {
   background: var(--header-bg) !important;
   color: #ffffff;
@@ -56,6 +60,11 @@ body {
 .form-control:focus, .form-select:focus {
   border-color: var(--accent-color) !important;
   box-shadow: 0 0 0 0.25rem rgba(var(--primary-rgb), 0.25) !important;
+}
+
+/* Input-group validation: tint the icon containers (prefix/suffix) red when the control is invalid */
+.input-group:has(.is-invalid) .input-group-text {
+  border-color: var(--bs-form-invalid-border-color, #dc3545);
 }
 
 /* Custom Card Styling */
